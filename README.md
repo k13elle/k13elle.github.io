@@ -9,4 +9,4 @@ Personal Website of Nathapon Vaiyavuthipinnyo
 - Photography
 
 #### Contributing in
-- [HelloWorldCollection](http://www.roesler-ac.de/wolfram/hello.htm)
+- [Hello World Collection](http://www.roesler-ac.de/wolfram/hello.htm)
