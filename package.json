@@ -1,0 +1,15 @@
+{
+  "name": "k13elle.github.io",
+  "version": "2.2.1",
+  "description": "@k13elle's Portfolio",
+  "keywords": [
+    "k13elle",
+    "@k13elle"
+  ],
+  "author": "Nathapon Vaiyavuthipinyo <k13elle@gmail.com> (http://k13elle.github.io)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/k13elle/k13elle.github.io.git"
+  }
+}
