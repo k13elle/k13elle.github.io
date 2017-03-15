@@ -1,12 +1,6 @@
-### k13elle.github.io
+# k13elle.github.io
 
-Personal Website of Nathapon Vaiyavuthipinnyo
-
-#### Interested in
-- Programming Algorithm
-- UI/UX Design
-- Data Science
-- Photography
+You can read and stuck with my coding style, if you want to.
 
 #### Contributing in
 - [Hello World Collection](http://www.roesler-ac.de/wolfram/hello.htm)
