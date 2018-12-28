@@ -1,0 +1,14 @@
+# TEMP FILES
+.DS_Store
+_DS_Store
+Thumbs.db
+ehthumbs.db
+*.stackdump
+[Dd]esktop.ini
+
+# DEPENDECIES
+node_modules
+
+# DISTIBUTION
+www
+dist
