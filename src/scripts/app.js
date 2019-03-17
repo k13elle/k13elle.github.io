@@ -1,12 +1,12 @@
-var portfolio = angular.module('portfolio', ['ngRoute']);
+var portfolioApp = angular.module('portfolio', ['ngRoute', 'ngResource']);
 
-portfolio.config(['$compileProvider', function ($compileProvider) {
+portfolioApp.config(['$compileProvider', function ($compileProvider) {
     $compileProvider.debugInfoEnabled(false);
     $compileProvider.commentDirectivesEnabled(false);
     $compileProvider.cssClassDirectivesEnabled(false);
 }]);
 
-portfolio.config(['$routeProvider', function ($routeProvider) {
+portfolioApp.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
         .when(
             '/',

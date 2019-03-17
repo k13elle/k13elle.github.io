@@ -4,9 +4,16 @@ module.exports = function(grunt) {
      */
     const sass = require('node-sass');
     const depDir = 'node_modules/';
+    const cssList = [
+        depDir + 'bootstrap/dist/bootstrap.min.css'
+    ];
     const jsList = [
+        depDir + 'jquery/dist/jquery.slim.min.js',
+        depDir + 'popper/dist/umd/popper.min.js',
+        depDir + 'bootstrap/dist/bootstrap.min.js',
         depDir + 'angular/angular.min.js',
         depDir + 'angular-route/angular-route.min.js',
+        depDir + 'angular-resource/angular-resource.min.js'
     ];
     
 
@@ -92,14 +99,6 @@ module.exports = function(grunt) {
             expand: true, flatten: true, filter: 'isFile',
             src: [paths.src.image + '*.{jpg,png}', paths.src.vector + '*.svg'], dest: paths.www.image
         },
-        depScript: {
-            expand: true, flatten: true, filter: 'isFile',
-            src: jsList, dest: paths.www.script
-        },
-        depScriptDist: {
-            expand: true, flatten: true, filter: 'isFile',
-            src: jsList, dest: paths.dist.script
-        },
         script: {
             expand: true, flatten: true, filter: 'isFile',
             src: [paths.src.script + '/*.js'], dest: paths.www.script
@@ -111,7 +110,9 @@ module.exports = function(grunt) {
      */
     // HAML
     gruntConfig.haml = {
-        options: {language: 'coffee'},
+        options: {
+            language: 'coffee',
+        },
         develop: {
             files: grunt.file.expandMapping(
                 [paths.src.markup + '/*.haml'],
@@ -141,6 +142,26 @@ module.exports = function(grunt) {
             flatten: true,
             src: [paths.src.script + '/common/*.js'],
             dest: paths.www.script + '/common.js'
+        },
+        scriptDep: {
+            flatten: true,
+            src: jsList,
+            dest: paths.www.script + '/dependencies.js'
+        },
+        scriptDepDist: {
+            flatten: true,
+            src: jsList,
+            dest: paths.dist.script + '/dependencies.js'
+        },
+        stylesheetDep: {
+            flatten: true,
+            src: cssList,
+            dest: paths.www.stylesheet + '/dependencies.css'
+        },
+        stylesheetDepDist: {
+            flatten: true,
+            src: cssList,
+            dest: paths.dist.stylesheet + '/dependencies.css'
         },
         scriptDist: {
             flatten: true,
@@ -223,11 +244,11 @@ module.exports = function(grunt) {
             limit: 8
         },
         devBuild: {tasks: [
-            'copy:depScript', 'copy:blob',
+            'copy-dependecies', 'copy:blob',
             'haml:develop', 'sass:develop', 'copy-own-script'
         ]},
         relBuild: {tasks: [
-            'copy:depScriptDist', 'imagemin:release',
+            'concat:scriptDepDist', 'imagemin:release',
             'haml:release', 'uglify:release', 'minify-stylesheet'
         ]},
         relLint: {tasks: ['jshint:develop', 'sasslint']},
@@ -265,7 +286,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-eslint');
     grunt.loadNpmTasks('grunt-haml');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-sass-lint');
@@ -277,6 +297,7 @@ module.exports = function(grunt) {
      */
 
     // PREDEFINED
+    grunt.registerTask('copy-dependecies', ['concat:stylesheetDep', 'concat:scriptDep']);
     grunt.registerTask('copy-own-script', ['copy:script', 'concat:script']);
     grunt.registerTask('minify-stylesheet', ['sass:release', 'cssmin', 'clean:plainCss']);
     
