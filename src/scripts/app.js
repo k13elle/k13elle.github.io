@@ -1,4 +1,9 @@
-var portfolioApp = angular.module('portfolio', ['ngRoute', 'ngResource']);
+var modules = [
+    'ngRoute', 'ngResource',
+    'ngAria', 'ngSanitize'
+];
+
+var portfolioApp = angular.module('portfolio', modules);
 
 portfolioApp.config(['$compileProvider', function ($compileProvider) {
     $compileProvider.debugInfoEnabled(false);
@@ -17,3 +22,7 @@ portfolioApp.config(['$routeProvider', function ($routeProvider) {
         )
         .otherwise({redirectTo: '/'});
 }]);
+
+angular.element(function() {
+    angular.bootstrap(document, ['portfolio']);
+});

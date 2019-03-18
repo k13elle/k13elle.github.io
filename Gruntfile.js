@@ -13,7 +13,9 @@ module.exports = function(grunt) {
         depDir + 'bootstrap/dist/bootstrap.min.js',
         depDir + 'angular/angular.min.js',
         depDir + 'angular-route/angular-route.min.js',
-        depDir + 'angular-resource/angular-resource.min.js'
+        depDir + 'angular-resource/angular-resource.min.js',
+        depDir + 'angular-aria/angular-aria.min.js',
+        depDir + 'angular-sanitize/angular-sanitize.min.js'
     ];
     
 
