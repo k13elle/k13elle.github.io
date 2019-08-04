@@ -69,8 +69,6 @@
         }
         #jpg {
             margin: 0 auto;
-            -webkit-filter: blur(30px);
-            filter: blur(30px);
             animation: flashing 3s infinite;
             -webkit-animation: flashing 3s infinite
         }
@@ -98,26 +96,26 @@
         #text {
             margin: 0 auto;
             padding: 10px 15px;
-            color: #ff6f61;
-            background-color: rgba(255,236,234,0.75);
+            color: #333;
+            background-color: rgba(255,255,255,0.75);
             border-radius: 99px;
         }
         #text a {
-            color: #61a2ff;
+            color: #61a200;
             text-decoration: none;
         }
 
         @keyframes flashing {
-            0% {filter: grayscale(30%);}
-            25% {filter: grayscale(90%);}
-            75% {filter: grayscale(90%);}
-            100% {filter: grayscale(30%);}
+            0% {filter: blur(10px) grayscale(30%);}
+            25% {filter: blur(10px) grayscale(90%);}
+            75% {filter: blur(10px) grayscale(90%);}
+            100% {filter: blur(10px) grayscale(30%);}
         }
         @-webkit-keyframes flashing {
-            0% {-webkit-filter: grayscale(30%);}
-            25% {-webkit-filter: grayscale(90%);}
-            75% {-webkit-filter: grayscale(90%);}
-            100% {-webkit-filter: grayscale(30%);}
+            0% {-webkit-filter: blur(10px) grayscale(30%);}
+            25% {-webkit-filter: blur(10px) grayscale(90%);}
+            75% {-webkit-filter: blur(10px) grayscale(90%);}
+            100% {-webkit-filter: blur(10px) grayscale(30%);}
         }
     </style>
     <body>
