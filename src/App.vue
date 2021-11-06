@@ -9,13 +9,15 @@
       <br><br>
       <a href="https://kenta13elle.wordpress.com/">Slice of life blog</a>
       <br><br>
-      <span class="italic">Under Renovation</span>
+      <a class="social-link" href="https://github.com/k13elle"><LogoGithub32 /></a>
+      <a class="social-link" href="https://www.flickr.com/photos/kenta13elle/"><LogoFlickr32 /></a>
+      <a class="social-link" href="https://twitter.com/k13elle"><LogoTwitter32 /></a>
     </section>
   </main>
 </template>
 
 <script>
-  const CryptoJS = require('crypto-js')
+  const CryptoJS = require('crypto-js');
 
   export default {
     name: 'App',
@@ -80,6 +82,14 @@ main {
 
 #card > .avatar {
   border-radius: 9999px;
+}
+
+.social-link {
+  margin-right: 5px;
+}
+
+.social-link:last-of-type {
+  margin-right: 0;
 }
 
 </style>
