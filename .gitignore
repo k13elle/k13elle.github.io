@@ -1,14 +1,6 @@
-# TEMP FILES
-.DS_Store
-_DS_Store
-Thumbs.db
-ehthumbs.db
-*.stackdump
-[Dd]esktop.ini
+.angular
+.DS_STORE
 
-# DEPENDECIES
 node_modules
 
-# DISTIBUTION
-www
-dist
+package-lock.json

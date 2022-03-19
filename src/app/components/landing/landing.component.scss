@@ -1,0 +1,56 @@
+$palette-1: #607981;
+$palette-2: #6667AB;
+
+:host {
+	width: 100vw;
+	height: 100vh;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-color: $palette-1;
+	background-image:
+		radial-gradient(circle at 100% 150%, $palette-1 24%, $palette-2 24%, $palette-2 28%, $palette-1 28%, $palette-1 36%, $palette-2 36%, $palette-2 40%, transparent 40%, transparent),
+		radial-gradient(circle at 0 150%, $palette-1 24%, $palette-2 24%, $palette-2 28%, $palette-1 28%, $palette-1 36%, $palette-2 36%, $palette-2 40%, transparent 40%, transparent),
+		radial-gradient(circle at 50% 100%, $palette-1 10%, $palette-1 23%, $palette-2 23%, $palette-2 30%, $palette-1 30%, $palette-1 43%, $palette-2 43%, $palette-2 50%, $palette-1 50%, $palette-1 63%, $palette-2 63%, $palette-2 71%, transparent 71%, transparent),
+		radial-gradient(circle at 100% 50%, $palette-1 5%, $palette-1 15%, $palette-2 15%, $palette-2 20%, $palette-1 20%, $palette-1 29%, $palette-2 29%, $palette-2 34%, $palette-1 34%, $palette-1 44%, $palette-2 44%, $palette-2 49%, transparent 49%, transparent),
+		radial-gradient(circle at 0 50%, $palette-1 5%, $palette-1 15%, $palette-2 15%, $palette-2 20%, $palette-1 20%, $palette-1 29%, $palette-2 29%, $palette-2 34%, $palette-1 34%, $palette-1 44%, $palette-2 44%, $palette-2 49%, transparent 49%, transparent);
+	background-size: 100px 50px;
+}
+
+#landing-card {
+	width: 500px;
+
+	mat-card-actions>* {
+		margin-right: 8px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	mat-card-content {
+		text-align: justify;
+	}
+}
+
+@media (max-width: 768px) {
+	:host {
+		align-items:flex-start;
+	}
+}
+
+@media (max-width: 480px) {
+	#landing-card {
+		width: calc(100vw - 50px);
+		margin-top: 9px;
+	}
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+	#landing-card {
+		width: calc(100vw - 100px);
+		margin-top: 34px;
+	}
+}

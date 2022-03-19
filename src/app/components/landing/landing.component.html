@@ -1,0 +1,28 @@
+<mat-card id="landing-card">
+	<mat-card-header>
+		<img mat-card-avatar [src]="gravatarServ.getGravatarUrl('k13elle@gmail.com')">
+		<mat-card-title>
+			{{ 'personal.firstName' | translate }} {{ 'personal.lastName' | translate }}
+		</mat-card-title>
+		<mat-card-subtitle>{{ 'personal.occupation' | translate }} (Web)</mat-card-subtitle>
+	</mat-card-header>
+	<mat-card-content><p>
+		I am a cross-platform front-end developer with web technology who is based in Bangkok, has experience in developing applications for IoT, energy management and financial services industries. I am looking forward to develop more applications with breakthrough technology.
+	</p></mat-card-content>
+	<!--<mat-divider></mat-divider>
+	<mat-card-actions>
+		<a *ngFor="let item of menu"
+			[ngSwitch]="item.display">
+			<button *ngSwitchCase="'icon'"
+				mat-icon-button color="accent"
+				[disabled]="item?.disabled ? true : null">
+				<ion-icon [name]="item.label"></ion-icon>
+			</button>
+			<button *ngSwitchDefault
+				mat-flat-button color="primary"
+				[disabled]="item?.disabled ? true : null">
+				{{ item.label | translate }}
+			</button>
+		</a>
+	</mat-card-actions> -->
+</mat-card>
