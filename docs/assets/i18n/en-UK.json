@@ -1,0 +1,12 @@
+{
+	"menu": {
+		"profile": "Profile",
+		"showcase": "Showcase",
+		"social": "Social"
+	},
+	"personal": {
+		"firstName": "Nathapon",
+		"lastName": "Vaiyavuthipinyo",
+		"occupation": "Software Engineer"
+	}
+}
