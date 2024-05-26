@@ -1,14 +1,21 @@
 import { Component } from '@angular/core';
 
-import { IMPORTS as imports } from '@/configs/app.config';
+import { IMPORTS, LOCALES } from '@/CF/app.config';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports,
+  imports: IMPORTS,
   templateUrl: './app.component.html',
-  styleUrl: './app.component.sass'
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'k13elle.github.io';
+  locales = LOCALES;
+
+  constructor(private translateServ: TranslateService) {}
+
+  changeLocale(locale: string): void {
+    this.translateServ.use(locale)
+  }
 }

@@ -1,0 +1,11 @@
+@import 'variable';
+
+html, body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	background-color: $background-color;
+	font-family: Roboto, "Helvetica Neue", sans-serif;
+}

@@ -26,12 +26,18 @@
     "paths": {
       "@/*": ["app/*"],
       "@/C/*": ["app/components/*"],
-      "@/CONF/*": ["app/configs/*"],
-      "@/M/*": ["app/modules/*"]
+      "@/CF/*": ["app/configs/*"],
+      "@/D/*": ["app/directives/*"],
+      "@/E/*": ["app/enums/*"],
+      "@/I/*": ["app/interfaces/*"],
+      "@/M/*": ["app/modules/*"],
+      "@/P/*": ["app/pipes/*"],
+      "@/S/*": ["app/services/*"],
+      "@/i18n/*": ["i18n/*"],
+      "@/style/*": ["styles/*"]
     }
   },
   "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
