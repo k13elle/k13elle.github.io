@@ -1,0 +1,23 @@
+<mat-card>
+  <mat-card-header>
+    <div
+      mat-card-avatar
+      [ngStyle]="{'background-image': (avatarLink$ | async)}">
+    </div>
+    <mat-card-title>{{ 'name' | translate }}</mat-card-title>
+    <mat-card-subtitle>A developer (web technologies) who based in Bangkok</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      Sorry for Inconveince, I'm quite busy right now.<br>
+      If you have any enquires, please leave me a mail. 
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    @for (link of profileLinks; track link) {
+      <a mat-icon-button [href]="link.href">
+        <mat-icon>{{ link.icon }}</mat-icon>
+      </a>
+    }
+  </mat-card-actions>
+</mat-card>

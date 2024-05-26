@@ -1,0 +1,17 @@
+<mat-toolbar>
+  <span>k13elle</span>
+  <div class="spacer"></div>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>language</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    @for (locale of locales; track locale) {
+      <button mat-menu-item (click)="changeLocale(locale)">
+        <span>{{ locale }}</span>
+      </button>
+    }
+  </mat-menu>
+</mat-toolbar>
+<div class="context-wrapper">
+  <router-outlet></router-outlet>
+</div>

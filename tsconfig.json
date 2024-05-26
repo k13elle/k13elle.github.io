@@ -2,19 +2,18 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
-    "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
     "sourceMap": true,
     "declaration": false,
-    "downlevelIteration": true,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",
@@ -22,10 +21,23 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["app/*"],
+      "@/C/*": ["app/components/*"],
+      "@/CF/*": ["app/configs/*"],
+      "@/D/*": ["app/directives/*"],
+      "@/E/*": ["app/enums/*"],
+      "@/I/*": ["app/interfaces/*"],
+      "@/M/*": ["app/modules/*"],
+      "@/P/*": ["app/pipes/*"],
+      "@/S/*": ["app/services/*"],
+      "@/i18n/*": ["i18n/*"],
+      "@/style/*": ["styles/*"]
+    }
   },
   "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
